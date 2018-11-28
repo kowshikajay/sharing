@@ -1,0 +1,125 @@
+#Author:kowshik
+@Hotel Booking Form
+
+
+Feature:Booking Form
+
+
+Scenario:Check the heading of the Booking page
+Given   user is on booking page
+Then    check the heading of the page
+
+
+Scenario:Successful booking with valid data
+Given  user is on booking page
+When   user entered valid credentials
+Then   user navigates to success page
+
+
+Scenario:unsuccessful booking with invalid personal details
+Given  user is on booking page
+When   user entered invalid personal details
+Then   user stays on the booking page
+
+Scenario:unsuccessful booking with invalid payment details
+Given  user is on booking page
+When   user entered invalid payment details
+Then   user stays on the same page
+
+Scenario:unsuccessful booking by not selecting city name
+Given   user is on booking page
+When    user entered personal details till address
+But     didn't selected city
+And     entered remaining details
+Then    user gets warning message as please select city
+
+
+Scenario:unsuccessful booking by not selecting state
+Given   user is on booking page
+When    user entered personal details till city
+But     didn't selected state
+And     entered remaining details
+Then    user gets warning message as please select state
+
+
+Scenario:unsuccessful booking by not giving first name
+Given  user is on booking page
+When   user didn't gave first name
+And    entered remaining details
+Then   user gets warning message as please enter your first name
+
+Scenario:unsuccessful booking by not giving mobile number
+Given  user is on booking page
+When   user didn't gave mobile number
+And    entered remaining details
+But    user leaves first name field empty
+Then   user gets warning message as please enter your mobile number
+
+Scenario:unsuccessful booking by not giving last name
+Given  user is on booking page
+When   user didn't gave last name
+And    entered remaining details
+But    user leaves last name field empty
+Then   user gets warning message as please enter your last name
+
+Scenario:unsuccessful booking by not giving email
+Given  user is on booking page
+When   user didn't gave email
+And    entered remaining details
+But    user leaves email field empty 
+Then   user gets warning message as please enter your email
+
+Scenario:unsuccessful booking by not giving guests
+Given  user is on booking page
+When   user didn't gave guests
+And    entered remaining details
+But    user leaves no. of guests blank
+Then   user gets warning message as please enter guests
+
+Scenario:unsuccesful booking by not giving card holder name
+Given   user is on booking page
+When    user didn't gave card holder name
+And     entered remaining details
+But     user forgot to give card holder name
+Then    user gets warning message as please enter card holder name
+
+
+Scenario:unsuccesful booking by not giving debit card number
+Given   user is on booking page
+When    user didn't gave debit card number
+And     entered remaining details
+But     user forgot to give debit card number
+Then    user gets warning message as please enter debit card number
+
+
+Scenario:unsuccesful booking by not giving CVV number
+Given   user is on booking page
+When    user didn't gave CVV number
+And     entered remaining details
+But     user forgot to give CVV number
+Then    user gets warning message as please enter CVV number
+
+
+Scenario:unsuccesful booking by not giving Expiration month
+Given   user is on booking page
+When    user didn't gave Expiration month
+And     entered remaining details
+But     user forgot to give expiration month 
+Then    user gets warning message as please enter Expiration month
+
+
+Scenario:unsuccesful booking by not giving Expiration year
+Given   user is on booking page
+When    user didn't gave Expiration year
+And     entered remaining details
+But     user forgot to give expiration year
+Then    user gets warning message as please enter Expiration year
+
+
+
+
+
+
+
+
+	
